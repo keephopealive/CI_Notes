@@ -19,32 +19,19 @@ class Note extends CI_Model {
 
 	public function delete($id)
 	{
-		$query = "DELETE FROM notes WHERE id = ?";
+		$query = "DELETE FROM notes 
+					WHERE id = ?";
 		return $this->db->query($query, $id);
 	}
 
 
 	public function update($note)
 	{
-		$query = "UPDATE notes SET content = ?, updated_at = NOW() WHERE id = ?";
+		$query = "UPDATE notes 
+					SET content = ?, updated_at = NOW() 
+					WHERE id = ?";
 		$values = array($note['content'], $note['id']);
 		return $this->db->query($query, $values);
 	}
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 }

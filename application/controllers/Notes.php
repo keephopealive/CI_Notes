@@ -3,7 +3,6 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 
 class Notes extends CI_Controller {
 
-	
 	public function index()
 	{
 		$notes = $this->Note->get_all();
@@ -29,22 +28,5 @@ class Notes extends CI_Controller {
 		$this->Note->update($this->input->post());
 		echo json_encode(true);
 	}
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 }
